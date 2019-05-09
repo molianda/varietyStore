@@ -1,4 +1,4 @@
-# variety
+# client
 
 > A Vue.js project
 

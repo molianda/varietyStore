@@ -4,7 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import 'lib-flexible/flexible'
+import 'css/reset.css'
+
+import icons from 'icons'
+import swipe from 'swipe'
+
 Vue.config.productionTip = false
+Vue.use(icons)
+Vue.use(swipe)
 
 /* eslint-disable no-new */
 new Vue({
