@@ -1,6 +1,9 @@
 <template>
   <div>
     <button @click="showDialog = true">点击</button>
+    <button @click="alertDialog">alert</button>
+    <button @click="confirmDialog">confirm</button>
+    <button @click="promptDialog">prompt</button>
     <Dialog
      title="标题"
      @success="ok"
@@ -13,8 +16,7 @@
 </template>
 
 <script>
-import Dialog from 'Dialog'
-
+import NumberInput from 'Number'
 export default {
   name: '',
 
@@ -27,15 +29,34 @@ export default {
   methods: {
     ok () {
       console.log('点击了OK')
-      this.showDialog = false
     },
     no () {
       console.log('点击了no')
-      this.showDialog = false
+    },
+    alertDialog () {
+      this.$alert('alert').then(() => {
+        console.log('点击了确认了')
+      }).catch(() => {
+        console.log('取消')
+      })
+    },
+    confirmDialog () {
+      this.$confirm('confirm').then(() => {
+        console.log('确认')
+      }).catch(() => {
+        console.log('取消')
+      })
+    },
+    promptDialog () {
+      this.$prompt({
+        type: NumberInput,
+        text: 'prompt'
+      }).then(() => {
+        console.log('确认')
+      }).catch(() => {
+        console.log('取消')
+      })
     }
-  },
-  components: {
-    Dialog
   }
 }
 </script>

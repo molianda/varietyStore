@@ -6,13 +6,12 @@ import router from './router'
 
 import 'lib-flexible/flexible'
 import 'css/reset.css'
+import 'animate.css'
 
-import icons from 'icons'
-import swipe from 'swipe'
+import BaseUi from 'BaseUi'
 
 Vue.config.productionTip = false
-Vue.use(icons)
-Vue.use(swipe)
+Vue.use(BaseUi)
 
 /* eslint-disable no-new */
 new Vue({

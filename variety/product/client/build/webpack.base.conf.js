@@ -41,8 +41,7 @@ module.exports = {
     modules: [
       resolve('../../components'),
       'node_modules',
-      resolve('../../assets'),
-      resolve('../../plugins')
+      resolve('../../assets')
     ]
   },
   module: {

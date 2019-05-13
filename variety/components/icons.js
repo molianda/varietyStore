@@ -6,8 +6,4 @@ const req = require.context('../assets/icons', false, /\.svg$/)// 查找icons直
 
 requireAll(req)
 
-export default {
-  install (Vue) {
-    Vue.component('svg-icon', SvgIcon)
-  }
-}
+export default SvgIcon
